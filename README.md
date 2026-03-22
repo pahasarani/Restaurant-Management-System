@@ -1,4 +1,4 @@
-# Restaurant Management System (Console)
+# Restaurant Management System 
 
 Console-based restaurant app with admin and customer roles, menu CRUD, add-on services, cart/checkout, and text-file persistence.
 
