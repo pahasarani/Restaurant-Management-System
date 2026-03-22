@@ -1,0 +1,50 @@
+BURG-006|Burgers|BBQ Pulled Pork Burger|1100.0|16
+BURG-002|Burgers|Cheddar Bacon Burger|1050.0|20
+BURG-010|Burgers|Chipotle Turkey Burger|970.0|19
+BURG-001|Burgers|Classic Beef Burger|950.0|25
+BURG-009|Burgers|Crispy Fish Burger|900.0|17
+BURG-007|Burgers|Double Stack Burger|1250.0|14
+BURG-005|Burgers|Mushroom Swiss Burger|990.0|15
+BURG-003|Burgers|Spicy Chicken Burger|920.0|22
+BURG-008|Burgers|Teriyaki Pineapple Burger|1020.0|12
+BURG-004|Burgers|Veggie Black Bean Burger|850.0|18
+DES-008|Desserts|Banoffee Pie Slice|640.0|17
+DES-004|Desserts|Caramel Bread Pudding|630.0|23
+DES-002|Desserts|Chocolate Lava Cake|700.0|20
+DES-010|Desserts|Classic Brownie|550.0|27
+DES-005|Desserts|Lemon Meringue Tart|610.0|24
+DES-001|Desserts|New York Cheesecake|650.0|22
+DES-007|Desserts|Nutella Crepe|690.0|18
+DES-006|Desserts|Strawberry Shortcake|680.0|19
+DES-003|Desserts|Tiramisu Cup|720.0|21
+DES-009|Desserts|Vanilla Bean Panna Cotta|620.0|16
+DRK-008|Drinks|Chocolate Milkshake|620.0|25
+DRK-003|Drinks|Classic Cola|320.0|45
+DRK-009|Drinks|Coconut Water|430.0|34
+DRK-006|Drinks|Cold Brew Coffee|550.0|32
+DRK-002|Drinks|Fresh Lime Soda|380.0|35
+DRK-001|Drinks|Iced Lemon Tea|450.0|40
+DRK-005|Drinks|Mango Lassi|520.0|28
+DRK-010|Drinks|Peach Iced Tea|470.0|33
+DRK-004|Drinks|Sparkling Berry Fizz|480.0|30
+DRK-007|Drinks|Vanilla Milkshake|600.0|26
+7cad2b14-7f19-4bf6-9473-1febe2021111|Kottu|Cheese Kottu|1500.0|16
+PAS-007|Pasta|Beef Lasagna|1380.0|19
+PAS-005|Pasta|Chicken Carbonara|1450.0|20
+PAS-009|Pasta|Chili Garlic Aglio e Olio|1150.0|23
+PAS-001|Pasta|Classic Alfredo|1200.0|25
+PAS-010|Pasta|Creamy Cajun Pasta|1350.0|16
+PAS-003|Pasta|Pesto Penne|1250.0|22
+PAS-004|Pasta|Shrimp Scampi Linguine|1500.0|18
+PAS-002|Pasta|Spaghetti Bolognese|1300.0|24
+PAS-008|Pasta|Spinach Ricotta Ravioli|1420.0|17
+PAS-006|Pasta|Veggie Primavera|1180.0|21
+PIZ-003|Pizzas|BBQ Chicken Pizza|1850.0|26
+PIZ-004|Pizzas|Four Cheese Pizza|1700.0|25
+PIZ-006|Pizzas|Hawaiian Pizza|1720.0|22
+PIZ-001|Pizzas|Margherita Pizza|1650.0|30
+PIZ-007|Pizzas|Meat Lovers Pizza|1900.0|20
+PIZ-002|Pizzas|Pepperoni Pizza|1750.0|28
+PIZ-008|Pizzas|Pesto Chicken Pizza|1820.0|18
+PIZ-009|Pizzas|Spicy Sausage Pizza|1780.0|17
+PIZ-005|Pizzas|Veggie Supreme Pizza|1700.0|22

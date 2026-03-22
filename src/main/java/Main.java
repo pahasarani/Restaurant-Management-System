@@ -1,4 +1,4 @@
-﻿import java.util.List;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -10,6 +10,7 @@ public class Main {
     private static final OrderService ORDER_SERVICE = new OrderService(FOOD_SERVICE);
 
     public static void main(String[] args) {
+        ResourceSeeder.seedDefaults();
         while (true) {
             printMainMenu();
             int choice = ConsoleUtils.readInt(SCANNER, "Choose option: ", 1, 3);
@@ -38,26 +39,24 @@ public class Main {
     }
 
     private static void handleLogin() {
-        System.out.println("1. Customer");
-        System.out.println("2. Admin");
-        int roleChoice = ConsoleUtils.readInt(SCANNER, "Select role: ", 1, 2);
-        String role = roleChoice == 1 ? "CUSTOMER" : "ADMIN";
         System.out.print("Username: ");
         String username = SCANNER.nextLine();
         System.out.print("Password: ");
         String password = SCANNER.nextLine();
 
-        User user = USER_SERVICE.login(role, username, password);
-        if (user == null) {
-            System.out.println("Invalid credentials.");
+        User admin = USER_SERVICE.login("ADMIN", username, password);
+        if (admin != null) {
+            runAdminMenu();
             return;
         }
 
-        if (role.equals("CUSTOMER")) {
-            runCustomerMenu((Customer) user);
-        } else {
-            runAdminMenu();
+        User customer = USER_SERVICE.login("CUSTOMER", username, password);
+        if (customer != null) {
+            runCustomerMenu((Customer) customer);
+            return;
         }
+
+        System.out.println("Invalid credentials.");
     }
 
     private static void handleRegistration() {
@@ -161,9 +160,9 @@ public class Main {
             System.out.println("No foods available.");
             return;
         }
-        System.out.println("\nID | Category | Name | Price | Quantity");
+        System.out.println("\nID | Category | Name | Price (Rs.) | Quantity");
         for (Food f : foods) {
-            System.out.println(f.getId() + " | " + f.getCategory() + " | " + f.getName() + " | " + f.getPrice() + " | " + f.getQuantity());
+            System.out.printf("%s | %s | %s | Rs. %.2f | %d%n", f.getId(), f.getCategory(), f.getName(), f.getPrice(), f.getQuantity());
         }
     }
 
@@ -197,9 +196,10 @@ public class Main {
         }
         System.out.println("\nCart items:");
         for (CartItem item : cart.getItems()) {
-            System.out.println(item.getFoodId() + " | " + item.getName() + " | qty: " + item.getQuantity() + " | line: " + item.getLineTotal());
+            System.out.printf("%s | %s | qty: %d | price: Rs. %.2f | line: Rs. %.2f%n",
+                item.getFoodId(), item.getName(), item.getQuantity(), item.getPrice(), item.getLineTotal());
         }
-        System.out.println("Total: " + cart.getTotal());
+        System.out.printf("Total: Rs. %.2f%n", cart.getTotal());
     }
 
     private static void removeFromCart(Cart cart) {
